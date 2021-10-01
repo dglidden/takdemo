@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tak's Silly Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div>Tak's Silly Demo</div>
+<hr/>
+
+<div>Things people hate:</div>
+
+<div th:each="anItem: ${allItems}" th:text="${anItem.name}"/>
+
+<hr/>
+
+<form action="#" th:action="@{/save}" th:object="${item}" method="post">
+    Thing to hate: <input type="text" th:field="*{name}"/><br/>
+    <input type="submit" value="Hate It"/>
+</form>
+
+</body>
+</html>
