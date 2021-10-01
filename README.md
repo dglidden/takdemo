@@ -8,6 +8,8 @@ Do this:
 
 
     mvnw package
+    
+    
     java -jar target/takdemo-0.0.1-SNAPSHOT.jar
 
 
